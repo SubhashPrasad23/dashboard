@@ -7,7 +7,7 @@ import AffiliatesList from "../components/AffiliatesList"
 const Dashboard = ({ isSidebarOpen, setIsSidebarOpen }) => {
 
     return (
-        <div className="flex-1 flex flex-col h-screen text-white bg-black lg:rounded-l-3xl">
+        <div className="flex-1 w-full flex flex-col h-screen text-white bg-black lg:rounded-l-3xl">
             <Header isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
             <TabNavigation />
             <div className="flex-1 p-6 space-y-6 overflow-auto hide-scrollbar">

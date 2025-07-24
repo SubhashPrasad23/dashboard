@@ -70,14 +70,17 @@ const RevenueChart = () => {
     };
 
     return (
-        <div className="border border-[#3e3e3e] rounded-2xl p-6 text-white font-sans max-w-4xl mx-auto">
+        <div className="border border-[#3e3e3e] rounded-2xl p-6 text-white font-sans  mx-auto">
             <h2 className="mb-8 text-lg font-medium">Revenue performance</h2>
-            <div className="h-80 mb-8">
+            <div className=" mb-8 w-full overflow-x-auto hide-scrollbar">
+                <div className="min-w-[600px] h-80 ">
+
+                
                 <ResponsiveContainer width="100%" height="100%">
                     <BarChart
                         data={data}
-                        margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                        barCategoryGap="20%"
+                        // margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                        // barCategoryGap="20%"
                     >
                         <CartesianGrid
                             strokeDasharray="3 3"
@@ -99,14 +102,15 @@ const RevenueChart = () => {
                         <Bar dataKey="series2" shape={<StripedBar />} radius={[2, 2, 0, 0]} maxBarSize={20} />
                     </BarChart>
                 </ResponsiveContainer>
-            </div>
+                </div>            </div>
 
-            <div className="w-full flex justify-between gap-5 mt-6 text-sm text-gray-300">
-                <div className="w-1/2 bg-[#1c1c1c] text-white px-4 py-2 rounded-xl flex md:flex-row flex-col items-center justify-between shadow-md">
-                    <div className="flex gap-2">
-                        <div className="w-5 h-2 bg-gradient-to-r from-white to-gray-600 mt-1" />
-                        <div>
-                            <p className="text-gray-400">Net income in</p>
+
+            <div className="w-full flex flex-col md:flex-row justify-between gap-4 mt-6 text-sm text-gray-300">
+                <div className="w-full md:w-1/2 bg-[#1c1c1c] text-white px-4 py-3 rounded-xl flex items-center justify-between shadow-md">
+                    <div className="flex  gap-3">
+                        <div className="w-5 h-2 mt-2 bg-gradient-to-r from-white to-gray-600" />
+                        <div className="leading-tight">
+                            <p className="text-gray-400 md:text-base text-lg">Net income in</p>
                             <p className="font-medium">Oct 2025 – Nov 2025</p>
                         </div>
                     </div>
@@ -116,11 +120,11 @@ const RevenueChart = () => {
                     </div>
                 </div>
 
-                <div className="w-1/2 bg-[#1c1c1c] text-white px-4 py-2 rounded-xl flex items-center justify-between shadow-md">
-                    <div className="flex gap-2">
-                        <div className="w-5 h-2 bg-gray-500 mt-1" />
-                        <div>
-                            <p className="text-gray-400">Net income in</p>
+                <div className="w-full md:w-1/2 bg-[#1c1c1c] text-white px-4 py-3 rounded-xl flex items-center justify-between shadow-md">
+                    <div className="flex  gap-3">
+                        <div className="w-5 h-2 mt-2 bg-gray-500" />
+                        <div className="leading-tight">
+                            <p className="text-gray-400 md:text-base text-lg">Net income in</p>
                             <p className="font-medium">Aug 2025 – Sep 2025</p>
                         </div>
                     </div>
@@ -130,6 +134,8 @@ const RevenueChart = () => {
                     </div>
                 </div>
             </div>
+
+
         </div>
     );
 };

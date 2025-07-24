@@ -1,7 +1,7 @@
 const MetricCard = ({ title, value, subtitle, percentage }) => {
 
     return (
-        <div className=" border border-[#3e3e3e] rounded-2xl p-6">
+        <div className=" border border-[#3e3e3e] rounded-2xl p-5">
             <div className=" text-base text-gray-400  mb-2">{title}</div>
             
             <div className="w-full flex  md:flex-col lg:flex-row lg:items-center flex-row gap-3">
